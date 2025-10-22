@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Modern Calculator</title>
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen bg-[#f3f0ff]">
+    <h2 class="text-gray-500 text-4xl mb-4 font-semibold ">Calculator</h2>
+
+    <div
+        class="bg-white/80 backdrop-blur-xl shadow-lg rounded-[30px] p-6 w-[340px] flex flex-col items-center transition-all duration-300">
+
+        <div
+            class="w-full h-[100px] mb-4 rounded-2xl bg-gray-50 flex items-end justify-end p-4 text-5xl font-semibold text-gray-800 shadow-inner">
+            <input type="text" id="result"
+                class="bg-transparent text-right w-full outline-none text-gray-800 placeholder-gray-400" placeholder="0"
+                readonly>
+        </div>
+
+        <div class="grid grid-cols-4 gap-3 w-full">
+            <button class="p-4 text-lg font-semibold text-red-500 bg-red-50 rounded-2xl hover:bg-red-100 transition"
+                onclick="deletelast()">DEL</button>
+
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('7')">7</button>
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('8')">8</button>
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('9')">9</button>
+            <button
+                class="p-4 text-lg font-semibold text-purple-700 bg-purple-50 rounded-2xl hover:bg-purple-100 transition"
+                onclick="displayContent('x')">×</button>
+
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('4')">4</button>
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('5')">5</button>
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('6')">6</button>
+            <button
+                class="p-4 text-lg font-semibold text-purple-700 bg-purple-50 rounded-2xl hover:bg-purple-100 transition"
+                onclick="displayContent('-')">−</button>
+
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('1')">1</button>
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('2')">2</button>
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('3')">3</button>
+            <button
+                class="p-4 text-lg font-semibold text-purple-700 bg-purple-50 rounded-2xl hover:bg-purple-100 transition"
+                onclick="displayContent('+')">+</button>
+             <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('÷')">÷</button>
+            <button class="p-4 text-lg font-semibold text-gray-800 bg-white rounded-2xl shadow hover:bg-gray-100"
+                onclick="displayContent('0')">0</button>
+           
+            <button class="p-4 text-lg font-semibold text-gray-500 bg-gray-100 rounded-2xl hover:bg-gray-200 transition"
+                onclick="clearCalcDisp()">AC</button>
+            <button
+                class="p-4 col-span-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl hover:opacity-90 transition"
+                onclick="calc()">=</button>
+        </div>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
